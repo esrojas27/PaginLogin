@@ -34,57 +34,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Inicio</a>
                     </li>
-                    <li class="nav-item">
+                   
+                     <li>
                         <a class="nav-link" href="#">Nosotros</a>
-                    </li>
-                    <li>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Login </a>
-                              <div class="dropdown-menu mt-3">
-                                <div class="card2 bg-white">
-                                    <div class="card-header mt-4 bg-white">
-                                        <div class="d-flex social_icon">
-                                            <span><i class="fab fa-facebook-square text-secondary"></i></span>
-                                            <span><i class="fab fa-google-plus-square  text-secondary"></i></span>
-                                            <span><i class="fab fa-twitter-square  text-secondary"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="card-body" >
-                                <form id="formLogin" class="form container-fluid">
-                                    <div class="input-group form-group">
-                                        <div class="input-group-prepend bg-info">
-                                            <span class="input-group-text text-secondary bg-white"><i class="fas fa-user"></i></span>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="Usuario">
-                                        
-                                    </div>
-                                    <div class="input-group form-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text text-secondary bg-white"><i class="fas fa-key"></i></span>
-                                        </div>
-                                        <input type="password" class="form-control" placeholder="Contraseña">
-                                    </div>
-                                    <div class="row align-items-center remember text-secondary">
-                                        <input type="checkbox">Recordar
-                                    </div>
-                                  <button type="button" id="btnLogin" class="btn btn-block text-white btn-info" >Ingresar</button>
-                                </form>
-                            </div>
-                            <div class="card-footer">
-                                <div class="d-flex justify-content-center links  text-secondary">
-                                    ¿No tienes cuenta?<a href="./form.html">Regístrate</a>
-                                </div>
-                                <div class="d-flex justify-content-center">
-                                    <a href="#">¿Olvidaste tu contraseña?</a>
-                                </div>
-                                </div>
-                                </div>	
-                              </div>
-                            </li>
-                          </ul>
-                    
-                    </li>
-                    
+                     </li>      
+                     <li class="nav-item">
+                        <a class="nav-link"  data-toggle="modal" data-target="#login_itech">Registrate</a>
+                    </li>     
                     <li class="nav-item">
                         <a class="nav-link" href="#">Iniciar sesión</a>
                     </li>
@@ -95,7 +51,32 @@
             </div>
         </nav>
     </header>
-
+    <!--POPUP-->
+    <div class="modal animated fadeIn" id="login_itech" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Password</label>
+                        <input type="password" class="form-control" aria-describedby="emailHelp" placeholder="Enter password">
+                    </div>
+                    <div class="text-center" id="loader_itech">
+                        <button type="button" class="btn btn-primary">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!------------------------------- Fin cabecera -------------------------------------->
 
     <!-------------------------------- Inicio Main  ------------------------------------->
@@ -163,7 +144,7 @@
             <ul class="list-inline">
                 <li class="list-inline-item footer-menu"><a href="index.html"> Inicio</a></li>
                 <li class="list-inline-item footer-menu"><a href="#"> Nosotros </a></li>
-                <li class="list-inline-item footer-menu"><a href="#"> Registrarse</a></li>
+                <li class="list-inline-item footer-menu" ><a href="#"> Registrarse</a></li>
                 <li class="list-inline-item footer-menu"><a href="#"> Iniciar sesión</a></li>
             </ul>
             <ul class="list-unstyled list-inline mt-4">
