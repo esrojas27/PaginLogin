@@ -10,6 +10,7 @@
     <link href="assets/css/header.css" rel="stylesheet" />
     <link href="assets/css/main.css" rel="stylesheet" />
     <link href="assets/css/footer.css" rel="stylesheet" />
+    <link href="assets/css/form.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -72,7 +73,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="d-flex justify-content-center links  text-secondary">
-                                    ¿No tienes cuenta?<a href="./form.html">Regístrate</a>
+                                    ¿No tienes cuenta?<a href="#">Regístrate</a>
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <a href="#">¿Olvidaste tu contraseña?</a>
@@ -101,57 +102,50 @@
     <!-------------------------------- Inicio Main  ------------------------------------->
     <main>
 
-        <!-------------------------------- Inicio sección categorias ------------------------------------->
-        <section class="container categories">
-            <div class="d-flex justify-content-center flex-wrap">
-                <button type="button" class="btn btn-info  m-1">Servicio 1</button>
-                <button type="button" class="btn btn-info  m-1">Servicio 2</button>
-                <button type="button" class="btn btn-info  m-1">Servicio 3</button>
-                <button type="button" class="btn btn-info  m-1">Servicio 4</button>
-                <button type="button" class="btn btn-info  m-1">Servicio 5</button>
-                <button type="button" class="btn btn-info  m-1">Servicio 6</button>
-
+        <!-------------------------------- Inicio seccion Formulario ------------------------------------->
+        <form class="formContact" onsubmit="validarFormulario(event)">
+            <div class="titulo">
+              <h3><strong>Formulario de Registro</strong></h3>
             </div>
-        </section>
-        <!-------------------------------- Fin sección categorias ------------------------------------->
-        <!-------------------------------- Inicio sección servicios ------------------------------------->
-        <section class="container d-flex py-5 justify-content-center flex-wrap">
-
-            <div class="row  m-1">
-                <div class="card text-center " style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Servicio 1</b></h5>
-                        <p class="card-text">Descripción del servicio.</p>
-                        <h5 class="card-title">$50.000</h5>
-                        <a href="#" class="btn text-white" style="background-color:#272343">Comprar</a>
-                    </div>
+              <div class="contInput">
+                  <label for="">Nombre</label>
+                  <input type="text" placeholder="Ej:Pepito" id="name">
+                  <small id="mensajeAlertNombre" class="mensajeAlert"></small>
+              </div>
+        
+              <div class="contInput">
+                <label for="">Apellido</label>
+                <input type="text"  id="lastName">
+                <small id="mensajeAlertLast" class="mensajeAlert"></small>
                 </div>
-            </div>
-
-            <div class="row m-1">
-                <div class="card text-center " style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Servicio 2</b></h5>
-                        <p class="card-text">Descripción del servicio.</p>
-                        <h5 class="card-title">$50.000</h5>
-                        <a href="#" class="btn text-white" style="background-color:#272343">Comprar</a>
-                    </div>
+        
+                <div class="contInput">
+                    <label for="">Correo</label>
+                    <input type="email" id="email">
+                    <small id="mensajeAlertEmail" class="mensajeAlert"></small>
                 </div>
-            </div>
-
-            <div class="row m-1">
-                <div class="card text-center" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Servicio 3</b></h5>
-                        <p class="card-text">Descripción del servicio.</p>
-                        <h3 class="card-title">$50.000</h3>
-                        <a href="#" class="btn text-white" style="background-color:#272343">Comprar</a>
-                    </div>
+        
+                <div class="contInput">
+                    <label for="">Contraseña</label>
+                    <input type="password" id="passw">
+                    <small id="mensajeAlertPassw" class="mensajeAlert"></small>
                 </div>
-            </div>
-
-        </section>
-        <!-------------------------------- Fin sección servicios ------------------------------------->
+        
+                <div class="contInput">
+                    <label for="">Edad</label>
+                    <input type="number" id="age">
+                    <small id="mensajeAlertAge" class="mensajeAlert"></small>
+                </div>
+                <div class="contInput inputTyC">
+                    <label for="inputTyC">Acepta terminos y condiciones</label>
+                    <input type="checkbox" id="inputTyC">
+                </div>
+                <small id="mensajeAlertTyC" class="mensajeAlert"></small>
+        
+                <input type="submit" value="Enviar" class="btnEnviar">
+        
+          </form>
+        <!-------------------------------- Fin sección Formulario ------------------------------------->
 
     </main>
     <!-------------------------------- Fin Main  ------------------------------------->
@@ -181,7 +175,7 @@
     </footer>
     <!------------------------------ Inicio Footer ----------------------------------->
 
-
+    <script src="./assets/js/form.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
         </script>
@@ -191,6 +185,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
         </script>
+    
 </body>
 
 
